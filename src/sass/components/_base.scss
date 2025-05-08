@@ -186,3 +186,7 @@ blockquote {
 .clear {
   @extend %clearfix;
 }
+
+.inline-block {
+  display: inline-block;
+}

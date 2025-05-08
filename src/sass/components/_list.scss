@@ -774,3 +774,23 @@ table.list.enumerations {
     font-weight: $font-weight-bold;
   }
 }
+
+
+//== Definition lists
+//
+
+#list-definition {
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .query-columns label {
+      display: block;
+    }
+
+    .field {
+      width: 4.85rem;
+    }
+  }
+}

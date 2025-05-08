@@ -55,6 +55,12 @@
 
       &.submenu {
         background-image: inline-svg("chevron-right.svg", (path: (fill: $btn-default-icon-color)));
+        background-repeat: no-repeat;
+        background-position: right;
+
+        + span.icon-only {
+          display: none;
+        }
       }
     }
   }

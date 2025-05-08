@@ -3,6 +3,8 @@
 // --------------------------------------------------
 
 form {
+  .filter > div,
+  #list-definition > div div,
   td {
     padding: $table-condensed-cell-padding;
   }
@@ -676,6 +678,7 @@ fieldset#filters {
     }
   }
 
+  div,
   td {
     &.field {
       padding-right: $table-cell-padding * 2;
@@ -713,6 +716,11 @@ fieldset#filters {
     input[type="radio"] {
       margin-top: $check-input-margin-btn-v;
     }
+  }
+
+  div.filter {
+    display: flex;
+    align-items: center;
   }
 
   div.add-filter {

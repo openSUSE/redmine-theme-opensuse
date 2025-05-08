@@ -1,3 +1,11 @@
+// Hide Redmine 6 new SVG icons
+svg.s12,
+svg.s14,
+svg.s18,
+svg.s20 {
+  display: none;
+}
+
 %fa-icon {
   &::before {
     @include fa-icon;
@@ -882,6 +890,21 @@ div.wiki {
 
     &::before {
       content: $fa-var-file-image-o;
+    }
+  }
+}
+
+.flyout-menu__search {
+  form {
+    &::after {
+      content: $fa-var-search;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: .5em;
+      transform: translateY(-50%);
+      color: $text-color;
+      font-family: FontAwesome;
     }
   }
 }

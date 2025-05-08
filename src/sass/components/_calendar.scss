@@ -176,4 +176,7 @@ p.cal.legend {
   span {
     display: block;
   }
+  svg + span {
+    display: inline-block;
+  }
 }

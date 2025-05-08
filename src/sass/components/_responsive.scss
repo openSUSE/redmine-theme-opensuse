@@ -39,7 +39,14 @@ body {
       }
     }
 
+    .flyout-menu__sidebar {
+      > div {
+        padding-left: 0;
+      }
+    }
+
     #header {
+      height: $responsive-header-height;
       background-color: $header-bg;
 
       #project-jump {
@@ -98,6 +105,10 @@ body {
       width: 200px;
     }
 
+    .sidebar-toggler {
+      display: none;
+    }
+
     .mobile-toggle-button {
       width: $responsive-header-height;
       height: $responsive-header-height;
@@ -113,7 +124,7 @@ body {
       color: $flyout-menu-text;
 
       .search-magnifier {
-        left: 18px;
+        display: none;
       }
 
       &__search {
@@ -212,7 +223,12 @@ body {
       }
 
       form {
+        position: relative;
         padding-left: 0;
+
+        label {
+          display: inline-block;
+        }
 
         > ul {
           margin-left: 0;
@@ -286,12 +302,6 @@ body {
     #query_form_content {
       fieldset {
         margin-bottom: $line-height-computed;
-      }
-    }
-
-    .search-magnifier {
-      &--flyout {
-        line-height: normal;
       }
     }
 
