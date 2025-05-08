@@ -28,6 +28,7 @@
 
 #content {
   padding: $padding-side;
+  overflow-x: auto; // needed for drag & drop of enumerations
 
   @if $css-grid-layout {
     grid-area: content;
@@ -106,7 +107,7 @@
 
   ul {
     &:nth-child(n) {
-      margin: 0 0 ($line-height-computed / 2);
+      margin: 0 0 ($line-height-computed * .5);
       padding: 0;
 
       @if $sidebar-position == "left" {
@@ -116,6 +117,7 @@
 
     &:not(.watchers) {
       li {
+        position: relative;
         margin: 0;
         padding: 0;
         list-style-type: none;
@@ -172,7 +174,7 @@
         > a.icon-only {
           position: absolute;
           top: $sidebar-padding-vertical;
-          right: $sidebar-padding-horizontal / 2;
+          right: $sidebar-padding-horizontal * .5;
           line-height: $line-height-computed;
 
           &::before {
@@ -195,8 +197,8 @@
 
         li {
           > a:not(.icon-only) {
-            padding-right: $sidebar-padding-horizontal / 2;
-            padding-left: $sidebar-padding-horizontal / 2;
+            padding-right: $sidebar-padding-horizontal * .5;
+            padding-left: $sidebar-padding-horizontal * .5;
 
             @if $sidebar-position == "right" {
               margin-left: 0;
@@ -204,7 +206,7 @@
           }
 
           .pages-hierarchy {
-            margin-left: $sidebar-padding-horizontal / 2 + 3px;
+            margin-left: $sidebar-padding-horizontal * .5 + 3px;
           }
         }
       }
@@ -244,7 +246,7 @@
         }
 
         .page-tree__list {
-          margin-left: $sidebar-padding-horizontal / 2 + 3px;
+          margin-left: $sidebar-padding-horizontal * .5 + 3px;
         }
 
         summary {
@@ -262,8 +264,8 @@
 
       li {
         > a:not(.icon-only) {
-          padding-right: $sidebar-padding-horizontal / 2;
-          padding-left: $sidebar-padding-horizontal / 2;
+          padding-right: $sidebar-padding-horizontal * .5;
+          padding-left: $sidebar-padding-horizontal * .5;
 
           @if $sidebar-position == "right" {
             margin-left: 0;
@@ -297,8 +299,8 @@
         &::before {
           content: "";
           position: absolute;
-          top: ($sidebar-padding-vertical + 1px) + ($line-height-computed - 16px) / 2;
-          left: $sidebar-padding-horizontal / 2 + 6px;
+          top: ($sidebar-padding-vertical + 1px) + ($line-height-computed - 16px) * .5;
+          left: $sidebar-padding-horizontal * .5 + 6px;
           width: 16px;
           height: 16px;
           background-image: inline-svg("chevron-right.svg", (path: (fill: $btn-default-icon-color)));
@@ -329,8 +331,8 @@
 }
 
 #footer {
-  margin: 0 $padding-side $line-height-computed;
-  padding-top: $line-height-computed;
+  margin: 0 $padding-side;
+  padding: $line-height-computed 0;
   border-top: 1px solid $gray-400;
   color: $gray-600;
   font-size: $font-size-small;
@@ -342,24 +344,49 @@
 
 @if $fixed-layout {
   @media screen and (min-width: $screen-sm-min) {
+    body {
+      background: $gray-100;
+    }
+    #top-menu,
+    #header,
     #main-menu ul,
-    #main {
+    #main,
+    #footer {
       width: $width-sm;
       margin-right: auto;
       margin-left: auto;
     }
+    #main {
+      overflow: hidden;
+      background: $body-bg;
+    }
+    #footer {
+      background: $body-bg;
+
+      &::before {
+        content: " ";
+        display: inline-block;
+        width: 20px;
+      }
+    }
   }
 
   @media screen and (min-width: $screen-md-min) {
+    #top-menu,
+    #header,
     #main-menu ul,
-    #main {
+    #main,
+    #footer {
       width: $width-md;
     }
   }
 
   @media screen and (min-width: $screen-lg-min) {
+    #top-menu,
+    #header,
     #main-menu ul,
-    #main {
+    #main,
+    #footer {
       width: $width-lg;
     }
   }
