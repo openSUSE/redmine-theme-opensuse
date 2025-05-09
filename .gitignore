@@ -4,3 +4,6 @@
 /.sublime-grunt.cache
 /images/logo
 /.stylelintcache
+
+src/sass/application.css
+src/sass/plugins/
