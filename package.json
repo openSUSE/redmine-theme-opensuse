@@ -27,6 +27,7 @@
   "dependencies": {
     "@liquid-js/sass-inline-svg": "^2.0.0",
     "autoprefixer": "^9.8.8",
+    "cssunminifier": "^0.0.2",
     "grunt": "^1.6.1",
     "grunt-contrib-uglify": "^5.2.2",
     "grunt-contrib-watch": "^1.1.0",
