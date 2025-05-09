@@ -5,7 +5,6 @@
 @import "lib/normalize";
 @import "lib/font-awesome";
 
-
 //== Redmine's core elements
 //
 
@@ -40,6 +39,8 @@
 @import "components/responsive";
 @import "components/print";
 
+// openSUSE custom
+@import "components/opensuse";
 
 //== Tweaks for plugins
 //
