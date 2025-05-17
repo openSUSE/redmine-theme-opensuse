@@ -247,53 +247,28 @@ a:hover {
  color: #019851;
 }
 
-tr.priority-high2 {
- background: #ffe1d7;
- color: #694141;
+/* "Low" */
+tr.priority-lowest {
+  background:#ffffff;
 }
-tr.priority-high2.odd {
- background: #ffd6c8;
+tr.priority-lowest.even {
+  background: #cce4b9;
 }
-tr.priority-high2 td {
- border-color: #efb6a2;
-}
-tr.priority-high2 a {
- color: #b04;
-}
-tr.priority-high2 a:hover {
- color: #880031;
+tr.priority-lowest.odd {
+  background: #d2e7c2;
 }
 
+/* "High" */
 tr.priority-high3 {
- background: #d5eaff;
- color: #3e3e4a;
-}
-tr.priority-high3.odd {
- background: #c6e2ff;
-}
-tr.priority-high3 td {
- border-color: #a1c8ee;
-}
-tr.priority-high3 a {
- color: #05a;
-}
-tr.priority-high3 a:hover {
- color: #003c77;
+  background:#fdd8d1
 }
 
+/* "Urgent" */
+tr.priority-high2 {
+  background:#fec4c3
+}
+
+/* "Immediate" */
 tr.priority-highest {
- background: #ffc4c4;
- color: #763434;
-}
-tr.priority-highest.odd {
- background: #ffb4b4;
-}
-tr.priority-highest td {
- border-color: #ec9292;
-}
-tr.priority-highest a {
- color: #a03;
-}
-tr.priority-highest a:hover {
- color: #770024;
+  background:#fdaba9
 }
